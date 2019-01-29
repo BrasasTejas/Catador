@@ -11,7 +11,7 @@ export default class Auth {
     auth0 = new auth0.WebAuth({
         domain: "brasastejas.auth0.com",
         clientID: "69JDsZ7R4EIE2LQlRDXc5RCtvrGgLCZa",
-        redirectUri: "http://localhost:3000/callback",
+        redirectUri: "https://catadortest.herokuapp.com//callback",
         audience: "https://brasastejas.auth0.com/userinfo",
         responseType: "token id_token",
         scope: "openid profile"
