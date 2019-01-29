@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Layout from './components/Layout/Layout';
+import Layout from './hoc/Layout/Layout';
 import CatadorRoller from "./containers/CatadorRoller/CatadorRoller";
 import Main from "./components/Authenticate/Main";
 import Secret from "./components/Authenticate/Secret";
