@@ -3,9 +3,9 @@ import React, { Component } from "react";
 import Layout from './hoc/Layout/Layout';
 import CatadorRoller from "./containers/CatadorRoller/CatadorRoller";
 import Main from "./components/Authenticate/Main";
-import Secret from "./components/Authenticate/Secret";
 import NotFound from "./components/Authenticate/NotFound";
 import Callback from "./components/Authenticate/Callback";
+import Secret from "./components/Authenticate/Secret";
 
 class App extends Component {
   render() {
@@ -17,16 +17,18 @@ class App extends Component {
         break;
       case "secret":
         mainComponent = this.props.auth.isAuthenticated() ? 
+        
         <div>
           <div>
             <Secret {...this.props} />
           </div> 
           <div>
-            <Layout>
-              <CatadorRoller />
-            </Layout>
-          </div>
-        </div> 
+          <Layout>
+            <CatadorRoller />
+          </Layout>
+        </div>
+      </div>
+          
         : <NotFound />;
         break;
       case "callback":
@@ -38,9 +40,7 @@ class App extends Component {
 
     return (
       <div>
-        <div>
-          {mainComponent}
-        </div>
+        {mainComponent}
       </div>
     );
   }

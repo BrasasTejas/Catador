@@ -1,5 +1,6 @@
     /* eslint no-restricted-globals: 0 */
 // import React, {Component} from "react";
+
 import auth0 from "auth0-js";
 import jwtDecode from "jwt-decode";
 
@@ -48,8 +49,10 @@ export default class Auth {
     }
 
     logout() {
-        localStorage.removeItem("access_token", "id_token", "expires_at");
-        location.pathname = LOGIN_FAILURE_PAGE
+        console.log("here")
+        localStorage.removeItem("access_token");
+        localStorage.removeItem("id_token");
+        localStorage.removeItem("expires_at");
     }
 
     getProfile() {

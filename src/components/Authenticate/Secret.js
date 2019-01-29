@@ -1,17 +1,20 @@
+/* eslint no-restricted-globals: 0 */
 import React, { Component } from "react";
 
 export default class Secret extends Component {
+    
     render() {
+        
         return(
-            
-            <div>
                 <div>
-                    Secret Area... SHHHH!!
+                    <button onClick={logoutButton}>Logout</button>
+                    
                 </div>
-                <div>
-                    <button onClick={this.props.auth.logout}>Logout</button>
-                </div>
-            </div>
         )
     }
 }
+
+function logoutButton() {
+    localStorage.clear();
+    window.location.href = '/';
+};
