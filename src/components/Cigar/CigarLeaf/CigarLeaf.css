@@ -1,10 +1,10 @@
 
 .Aroma {
   width: 70%;
-  height: 3%;
-  background: linear-gradient(rgb(51, 48, 48), white);
+  height: 10%;
+  background: linear-gradient(sienna, maroon);
   margin: 2% auto;
-  /* margin-bottom: 10%; */
+  border-radius: 50% 25% 25% 50%;
 }
 
 .CigarBinder {
